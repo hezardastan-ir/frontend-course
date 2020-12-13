@@ -1,12 +1,11 @@
 {
-  "name": "front-end-assessment",
+  "name": "front-end-assessment-server",
   "version": "1.0.0",
   "description": "A project for assessment of front-end web developers",
-  "main": "app.js",
-  "repository": "git@git.cafebazaar.ir:hashem/front-end-assessment.git",
-  "author": "Cafe Bazaar",
+  "main": "server.js",
+  "repository": "https://github.com/hezardastan-ir/frontend-course/edit/master/server",
+  "author": "Hezardastan",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "start": "node server.js",
     "init:db": "node initdb.js"
