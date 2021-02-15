@@ -203,7 +203,7 @@ app.get('/posts/:id/comments', (req, res) => {
 // Create a Comment for a Post
 app.post('/posts/:id/comments',[
     body('author',INVALID_VALUE_MESSAGE).exists({checkNull: true}),
-    body('parent_id',INVALID_VALUE_MESSAGE).isNumeric(),
+    body('parent_id',INVALID_VALUE_MESSAGE).custom((value) => Number.isInteger(value) || value === null),
     body('date', INVALID_VALUE_MESSAGE).isString(),
     body('body',INVALID_VALUE_MESSAGE).exists({checkNull: true}),
     checkValidation
